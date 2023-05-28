@@ -19,7 +19,7 @@ def open_file():
 
 
 def mostrarAdvertencia():
-    messagebox.showwarning("Advertencia", "Selecciona un archivo")
+    messagebox.showwarning("Advertencia", "Selecciona un archivoooooo")
 
 
 
