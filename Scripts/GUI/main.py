@@ -1,20 +1,39 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter.filedialog import askopenfile
+import tkinter as tk
+import csv
+
 
 
 def open_file():
-    """
-    Esta función abre el archivo tipo asm y ejecuta las ventana para el analizador léxico"
-    :return:
-    """
-    file = askopenfile(mode='r', filetypes=[('Conjunto de Datos', '*.txt')])  # Abriendo el archivo desde un file explorer
+    file = askopenfile(mode='r', filetypes=[('csv File', '*.csv')])  # Abriendo el archivo desde un file explorer
     if file is None:  # Si el usuario no selecciona algún archivo
         mostrarAdvertencia()  # Muestra advertencia
     else:
         contenido = file.read()
         ventana_principal.mostrar_contenido(contenido)
 
+def load_csv(filename):
+    with open(filename, 'r') as file:
+        reader = csv.reader(file)
+        data = list(reader)
+    return data
+
+def display_csv_data(csv_data):
+    root = tk.Tk()
+    root.title("CSV Viewer")
+
+    # Create a Text widget to display the CSV data
+    text_widget = tk.Text(root)
+    text_widget.pack()
+
+    # Insert the CSV data into the Text widget
+    for row in csv_data:
+        line = '\t'.join(row)  # Use tab as column separator
+        text_widget.insert(tk.END, line + '\n')
+
+    root.mainloop()
 
 def mostrarAdvertencia():
     messagebox.showwarning("Advertencia", "Selecciona un archivo")
@@ -24,8 +43,23 @@ class VentanaPrincipal(tk.Tk):
     def __init__(self):
         super().__init__()
 
-        self.title("Ventana Principal")
-        self.geometry("800x600")
+        self.title("Proyecto Final")
+        self.geometry("800x500")
+
+        self.menu=tk.Menu(self)
+        self.filemenu = tk.Menu(self.menu, tearoff=0)
+        self.filemenu.add_command(label="Abrir Archivo", command=open_file)
+        self.filemenu.add_separator()
+        self.filemenu.add_command(label="Salir", command=self.quit)
+
+        self.menu.add_cascade(label="Archivo", menu=self.filemenu)
+        self.config(menu=self.menu)
+
+        self.tools_menu = tk.Menu(self.menu, tearoff=0)
+        self.tools_menu.add_command(label="Procesar", command=self.abrir_ventana_secundaria)
+        self.menu.add_cascade(label="Herramientas", menu=self.tools_menu)
+
+
 
         self.frame_superior = tk.Frame(self)
         self.frame_superior.pack(side=tk.TOP, pady=20)
@@ -46,31 +80,8 @@ class VentanaPrincipal(tk.Tk):
         self.frame_inferior = tk.Frame(self)
         self.frame_inferior.pack(side=tk.BOTTOM, pady=20)
 
-        self.btn_abrir_archivo = tk.Button(self.frame_inferior, text="Abrir archivo", font='Fixedsys', background="blue",
-                                           command=lambda: open_file())
-        self.btn_abrir_archivo.pack(side=tk.LEFT, padx=10)
-
-        self.btn_abrir_ventana = tk.Button(self.frame_inferior, text="Procesar", font='Fixedsys', background="green",
-                                           command=self.abrir_ventana_secundaria)
-        self.btn_abrir_ventana.pack(side=tk.LEFT, padx=10)
-
-        self.btn_salir = tk.Button(self.frame_inferior, text="Salir", font='Fixedsys', background="yellow",
-                                   command=lambda: self.destroy())
-        self.btn_salir.pack(side=tk.LEFT, padx=10)
 
         self.update_idletasks()  # Actualiza la ventana para que los elementos se muestren correctamente centrados
-        self.configure_buttons_and_label()
-
-    def configure_buttons_and_label(self):
-        # Ajusta los botones y el label al centro de la ventana principal
-        frame_width = self.frame_inferior.winfo_width()
-        btn_width = self.btn_abrir_archivo.winfo_width()
-        label_width = self.label_contenido.winfo_width()
-        btn_padx = (frame_width - 2 * btn_width - label_width - 20) // 4
-
-        self.btn_abrir_archivo.configure(padx=btn_padx)
-        self.btn_abrir_ventana.configure(padx=btn_padx)
-        self.btn_salir.configure(padx=btn_padx)
 
     def abrir_ventana_secundaria(self):
         self.withdraw()  # Oculta la ventana principal
@@ -79,8 +90,14 @@ class VentanaPrincipal(tk.Tk):
         ventana_secundaria.deiconify()  # Muestra la ventana secundaria
 
     def mostrar_contenido(self, contenido):
+
         self.label_contenido.delete("1.0", tk.END)  # Borra el contenido existente
         self.label_contenido.insert(tk.END, contenido)
+
+
+
+
+
 
 
 class VentanaSecundaria(tk.Toplevel):
