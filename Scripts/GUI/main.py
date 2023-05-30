@@ -70,7 +70,7 @@ class VentanaPrincipal(tk.Tk):
         self.scrollbar_x = tk.Scrollbar(self.frame_superior, orient=tk.HORIZONTAL)
         self.scrollbar_x.pack(side=tk.BOTTOM, fill=tk.X)
 
-        self.label_contenido = tk.Text(self.frame_superior, font='Fixedsys', background="purple", wrap=tk.NONE)
+        self.label_contenido = tk.Text(self.frame_superior, font='Fixedsys', background="gray", wrap=tk.NONE)
         self.label_contenido.pack(pady=5, fill=tk.BOTH, expand=True)
 
         self.label_contenido.config(yscrollcommand=self.scrollbar_y.set, xscrollcommand=self.scrollbar_x.set)
@@ -90,9 +90,9 @@ class VentanaPrincipal(tk.Tk):
         ventana_secundaria.deiconify()  # Muestra la ventana secundaria
 
     def mostrar_contenido(self, contenido):
-
-        self.label_contenido.delete("1.0", tk.END)  # Borra el contenido existente
+        self.label_contenido.delete("1.0", tk.END)  # Borrar el contenido existente
         self.label_contenido.insert(tk.END, contenido)
+
 
 
 
@@ -137,7 +137,7 @@ class VentanaSecundaria(tk.Toplevel):
         self.scrollbar_x2 = tk.Scrollbar(self.frame_izquierdo, orient=tk.HORIZONTAL)
         self.scrollbar_x2.pack(side=tk.BOTTOM, fill=tk.X)
 
-        self.label_contenido2 = tk.Text(self.frame_izquierdo, font='Fixedsys', background="purple", wrap=tk.NONE)
+        self.label_contenido2 = tk.Text(self.frame_izquierdo, font='Fixedsys', background="gray", wrap=tk.NONE)
         self.label_contenido2.pack(pady=10, fill=tk.BOTH, expand=True)
 
         self.label_contenido2.config(yscrollcommand=self.scrollbar_y2.set, xscrollcommand=self.scrollbar_x2.set)
