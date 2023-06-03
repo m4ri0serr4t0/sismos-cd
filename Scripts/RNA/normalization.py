@@ -2,8 +2,8 @@ import pandas as pd
 import csv
 mexico = pd.read_csv("Mexico.csv")
 chile = pd.read_csv("Chile.csv")
-italia= pd.read_csv("italy_earthquakes_from_2016-08-24_to_2016-11-30.csv")
-mes= pd.read_csv("all_monthh.csv")
+italia = pd.read_csv("italy_earthquakes_from_2016-08-24_to_2016-11-30.csv")
+argentina = pd.read_csv("argentina.csv")
 
 #Mexico
 
@@ -13,7 +13,6 @@ max_cargaAx_mx=mexico["MaxPd"].values
 with open ('pesos_cargaAx_mx.csv', 'w', newline='') as file_mexico:
     writer_mexico = csv.writer(file_mexico)
     writer_mexico.writerow(["W", "MaxPd"])
-
 
     for i in range(len(peso_personas_mx)): #peso_personas_mx y max_cargaAx tienen la misma dimension
         valor_normalizado_peso_mx = (peso_personas_mx[i]-peso_personas_mx.min()) / (peso_personas_mx.max() - peso_personas_mx.min())
@@ -51,16 +50,16 @@ with open('magnitud.csv', 'w', newline='') as file_italia:
         valor_normalizado_magnitud_error = (magnitud_error[i] - magnitud_error.min()) / (magnitud_error.max() - magnitud_error.min())
         writer_italia.writerow([valor_normalizado_magnitud, valor_normalizado_magnitud_error])
 
-magnitud_total=mes["magNst"].values  # lee solo los valores sin indices
-magnitud_error = mes["magError"].values
+magnitudd_total=argentina["Magnitude"].values  # lee solo los valores sin indices
+magnitudd_error = argentina["errorMag"].values
 
-#mes
-with open('mag.csv', 'w', newline='') as file_mes:
-    writer_mes = csv.writer(file_mes)
-    writer_mes.writerow(["magNst", "magError"])
+#argentina
+with open('magnitud_Arg.csv', 'w', newline='') as file_argentina:
+    writer_argentina = csv.writer(file_argentina)
+    writer_argentina.writerow(["Magnitude", "errorMag"])
 
-    for i in range(len(magnitud_total)):
-        valor_normalizado_magnitud = (magnitud_total[i] - magnitud_total.min()) / (
-                    magnitud_total.max() - magnitud_total.min())
-        valor_normalizado_magnitud_error = (magnitud_error[i] - magnitud_error.min()) / (magnitud_error.max() - magnitud_error.min())
-        writer_mes.writerow([valor_normalizado_magnitud, valor_normalizado_magnitud_error])
+    for i in range(len(magnitudd_total)):
+        valor_normalizado_magnitud = (magnitudd_total[i] - magnitudd_total.min()) / (
+                    magnitudd_total.max() - magnitudd_total.min())
+        valor_normalizado_magnitud_error = (magnitudd_error[i] - magnitudd_error.min()) / (magnitudd_error.max() - magnitudd_error.min())
+        writer_argentina.writerow([valor_normalizado_magnitud, valor_normalizado_magnitud_error])
