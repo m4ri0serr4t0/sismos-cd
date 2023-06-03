@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7322b39-1f9e-49b6-9333-91a16f75108f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/RNA/all_month.csv.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Proyecto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/all_month.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/italy_earthquakes_from_2016-08-24_to_2016-11-30.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/italy_earthquakes_from_2016-08-24_to_2016-11-30.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/normalization.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
