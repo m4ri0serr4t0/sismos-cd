@@ -10,7 +10,7 @@ argentina = pd.read_csv("argentina.csv")
 peso_personas_mx=mexico["W"].values #lee solo los valores sin indices
 max_cargaAx_mx=mexico["MaxPd"].values
 
-with open ('pesos_cargaAx_mx.csv', 'w', newline='') as file_mexico:
+with open ('normalized_data/pesos_cargaAx_mx.csv', 'w', newline='') as file_mexico:
     writer_mexico = csv.writer(file_mexico)
     writer_mexico.writerow(["W", "MaxPd"])
 
@@ -24,7 +24,7 @@ max_cargaAx_cl = chile["MaxPd"].values
 # print(peso_personas_mx)
 
 #Chile
-with open('pesos_cargaAx_cl.csv', 'w', newline='') as file_chile:
+with open('normalized_data/pesos_cargaAx_cl.csv', 'w', newline='') as file_chile:
     writer_chile = csv.writer(file_chile)
     writer_chile.writerow(["W", "MaxPd"])
 
@@ -42,7 +42,7 @@ magnitud= italia["Magnitude"].values
 
 
 #italia
-with open('magnitud_it.csv', 'w', newline='') as file_italia:
+with open('normalized_data/magnitud_it.csv', 'w', newline='') as file_italia:
     writer_italia = csv.writer(file_italia)
     writer_italia.writerow(["Latitude", "Longitude", "Magnitude"])
 
@@ -57,7 +57,7 @@ magnitudd_total=argentina["Magnitude"].values  # lee solo los valores sin indice
 magnitudd_error = argentina["errorMag"].values
 
 #argentina
-with open('magnitud_Arg.csv', 'w', newline='') as file_argentina:
+with open('normalized_data/magnitud_Arg.csv', 'w', newline='') as file_argentina:
     writer_argentina = csv.writer(file_argentina)
     writer_argentina.writerow(["Magnitude", "errorMag"])
 
