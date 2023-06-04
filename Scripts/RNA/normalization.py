@@ -2,7 +2,7 @@ import pandas as pd
 import csv
 mexico = pd.read_csv("Mexico.csv")
 chile = pd.read_csv("Chile.csv")
-italia = pd.read_csv("italy_earthquakes_from_2016-08-24_to_2016-11-30.csv")
+italia = pd.read_csv("italia.csv")
 argentina = pd.read_csv("argentina.csv")
 
 #Mexico
@@ -36,19 +36,22 @@ with open('pesos_cargaAx_cl.csv', 'w', newline='') as file_chile:
 
 #valor_normalizado = (valor_original - valor_minimo) / (valor_maximo - valor_minimo)
 
-magnitud_totalI= italia["Magnitude"].values  # lee solo los valores sin indices
-magnitud_error = italia["magError"].values
+latitud= italia["Latitude"].values  # lee solo los valores sin indices
+longitud= italia["Longitude"].values
+magnitud= italia["Magnitude"].values
+
 
 #italia
-with open('magnitud.csv', 'w', newline='') as file_italia:
+with open('magnitud_it.csv', 'w', newline='') as file_italia:
     writer_italia = csv.writer(file_italia)
-    writer_italia.writerow(["Magnitude", "magError"])
+    writer_italia.writerow(["Latitude", "Longitude", "Magnitude"])
 
-    for i in range(len(magnitud_totalI)):
-        valor_normalizado_magnitud = (magnitud_totalI[i] - magnitud_totalI.min()) / (
-                    magnitud_totalI.max() - magnitud_totalI.min())
-        valor_normalizado_magnitud_error = (magnitud_error[i] - magnitud_error.min()) / (magnitud_error.max() - magnitud_error.min())
-        writer_italia.writerow([valor_normalizado_magnitud, valor_normalizado_magnitud_error])
+    for i in range(len(latitud)):
+         valor_normalizado_latitud = (latitud[i] - latitud.min()) / (latitud.max() - latitud.min())
+         valor_normalizado_longitud = (longitud[i] - longitud.min()) / (longitud.max() - longitud.min())
+         valor_normalizado_magnitud = (magnitud[i] - magnitud.min()) / (magnitud.max() - magnitud.min())
+
+         writer_italia.writerow([valor_normalizado_latitud, valor_normalizado_longitud, valor_normalizado_magnitud])
 
 magnitudd_total=argentina["Magnitude"].values  # lee solo los valores sin indices
 magnitudd_error = argentina["errorMag"].values
