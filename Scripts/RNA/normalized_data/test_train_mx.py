@@ -43,5 +43,8 @@ print("\nDimensiones del conjunto de prueba:")
 print("Características (X_test):", X_test.shape)
 print("Etiquetas (y_test):", len(y_test))
 
-print(X_train)
-print(X_test)
+train_data = pd.DataFrame(X_train, columns=columnas)
+train_data.to_csv('train_data_mx.csv', index=False)
+
+test_data = pd.DataFrame(X_test, columns=columnas)
+test_data.to_csv('test_data_mx.csv', index=False)

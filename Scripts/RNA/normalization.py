@@ -10,7 +10,7 @@ argentina = pd.read_csv("argentina.csv")
 peso_personas_mx=mexico["W"].values #lee solo los valores sin indices
 max_cargaAx_mx=mexico["MaxPd"].values
 
-with open ('pesos_cargaAx_mx.csv', 'w', newline='') as file_mexico:
+with open ('normalized_data/pesos_cargaAx_mx.csv', 'w', newline='') as file_mexico:
     writer_mexico = csv.writer(file_mexico)
     writer_mexico.writerow(["W", "MaxPd"])
 
