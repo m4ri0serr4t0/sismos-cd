@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cebbdde-ac40-4739-9f1d-8659e44589cb" name="Changes" comment="Agregados conjuntos de datos y implementación de normalización">
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/italy_earthquakes_from_2016-08-24_to_2016-11-30.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/italia.csv" afterDir="false" />
+    <list default="true" id="6cebbdde-ac40-4739-9f1d-8659e44589cb" name="Changes" comment="Normalización completada">
+      <change afterPath="$PROJECT_DIR$/Scripts/RNA/rna.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proyecto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/normalization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/pesos_cargaAx_mx.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/pesos_cargaAx_mx.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +47,13 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA" />
+      <recent name="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA\normalized_data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.rna">
     <configuration name="normalization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Proyecto" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,8 +76,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="rna" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/RNA" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/RNA/rna.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.rna" />
         <item itemvalue="Python.normalization" />
       </list>
     </recent_temporary>
@@ -81,7 +114,8 @@
       <option name="presentableId" value="Default" />
       <updated>1685669805461</updated>
       <workItem from="1685669811012" duration="5484000" />
-      <workItem from="1685834332823" duration="1541000" />
+      <workItem from="1685834332823" duration="2840000" />
+      <workItem from="1685849496268" duration="1989000" />
     </task>
     <task id="LOCAL-00001" summary="Agregados conjuntos de datos y implementación de normalización">
       <created>1685679530348</created>
@@ -90,7 +124,28 @@
       <option name="project" value="LOCAL" />
       <updated>1685679530348</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Normalización completada">
+      <created>1685837147818</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685837147818</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Normalización completada">
+      <created>1685837196575</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685837196575</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Normalización completada">
+      <created>1685837265787</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685837265788</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,9 +164,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Agregados conjuntos de datos y implementación de normalización" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregados conjuntos de datos y implementación de normalización" />
+    <MESSAGE value="Normalización completada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Normalización completada" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Proyecto$normalization.coverage" NAME="normalization Coverage Results" MODIFIED="1685837058126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA" />
+    <SUITE FILE_PATH="coverage/Proyecto$normalization.coverage" NAME="normalization Coverage Results" MODIFIED="1685837184633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA" />
+    <SUITE FILE_PATH="coverage/Proyecto$rna.coverage" NAME="rna Coverage Results" MODIFIED="1685851454121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA" />
   </component>
 </project>
