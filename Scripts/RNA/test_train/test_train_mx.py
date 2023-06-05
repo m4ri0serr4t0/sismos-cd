@@ -2,11 +2,11 @@ import pandas as pd
 import numpy as np
 
 # Cargar los datos desde un archivo CSV
-chile = pd.read_csv('pesos_cargaAx_cl.csv')
+mexico = pd.read_csv('../normalized_data/pesos_cargaAx_mx.csv')
 
 # Obtener características (X) y etiquetas (y)
-X = chile.values
-columnas = chile.columns
+X = mexico.values
+columnas = mexico.columns
 
 # Obtener los nombres de las columnas
 etiquetas = columnas.tolist()
@@ -44,7 +44,7 @@ print("Características (X_test):", X_test.shape)
 print("Etiquetas (y_test):", len(y_test))
 
 train_data = pd.DataFrame(X_train, columns=columnas)
-train_data.to_csv('train_data_cl.csv', index=False)
+train_data.to_csv('train_data_mx.csv', index=False)
 
 test_data = pd.DataFrame(X_test, columns=columnas)
-test_data.to_csv('test_data_cl.csv', index=False)
+test_data.to_csv('test_data_mx.csv', index=False)

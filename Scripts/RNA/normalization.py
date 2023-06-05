@@ -1,9 +1,9 @@
 import pandas as pd
 import csv
-mexico = pd.read_csv("Mexico.csv")
-chile = pd.read_csv("Chile.csv")
-italia = pd.read_csv("italia.csv")
-argentina = pd.read_csv("argentina.csv")
+mexico = pd.read_csv("datasets/Mexico.csv")
+chile = pd.read_csv("datasets/Chile.csv")
+italia = pd.read_csv("datasets/italia.csv")
+argentina = pd.read_csv("datasets/argentina.csv")
 
 #Mexico
 

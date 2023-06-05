@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cebbdde-ac40-4739-9f1d-8659e44589cb" name="Changes" comment="starting rna">
+      <change afterPath="$PROJECT_DIR$/Scripts/RNA/rna.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/test_train_arg.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/normalized_data/test_train_arg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/test_train_cl.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/normalized_data/test_train_cl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/test_train_it.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/normalized_data/test_train_it.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/GUI/.idea/mostrarDatos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/GUI/.idea/mostrarDatos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/Chile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/datasets/Chile.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/Mexico.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/datasets/Mexico.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/argentina.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/datasets/argentina.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/italia.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/datasets/italia.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/normalization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/test_train_arg.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/test_train/test_train_arg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/test_train_cl.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/test_train/test_train_cl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/test_train_it.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/test_train/test_train_it.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/test_train_mx.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/test_train/test_train_mx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/test_data_mx.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/RNA/train_data_mx.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,33 +44,104 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA\normalized_data" />
       <recent name="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA" />
+      <recent name="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA\datasets" />
+      <recent name="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA\test_train" />
+      <recent name="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA\normalized_data\train_data" />
+      <recent name="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA\normalized_data\test_data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_train_mx">
-    <configuration name="normalization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.rna">
+    <configuration name="rna" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Proyecto" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/RNA" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/RNA/normalization.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/RNA/rna.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_train_arg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/RNA/normalized_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA\test_train\test_train_arg.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_train_cl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/RNA/normalized_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA\test_train\test_train_cl.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_train_it" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/RNA/normalized_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA\test_train\test_train_it.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -77,12 +158,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/RNA" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/RNA/normalized_data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA\normalized_data\test_train_mx.py" />
+      <option name="SCRIPT_NAME" value="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA\test_train\test_train_mx.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -93,8 +174,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_train_mx" />
-        <item itemvalue="Python.normalization" />
+        <item itemvalue="Python.rna" />
+        <item itemvalue="Python.test_train_it" />
+        <item itemvalue="Python.test_train_cl" />
+        <item itemvalue="Python.test_train_arg" />
       </list>
     </recent_temporary>
   </component>
@@ -109,6 +192,9 @@
       <workItem from="1685669811012" duration="5484000" />
       <workItem from="1685834332823" duration="2840000" />
       <workItem from="1685849496268" duration="2782000" />
+      <workItem from="1685937086751" duration="3004000" />
+      <workItem from="1685940136467" duration="691000" />
+      <workItem from="1685940936034" duration="331000" />
     </task>
     <task id="LOCAL-00001" summary="Agregados conjuntos de datos y implementación de normalización">
       <created>1685679530348</created>
@@ -167,5 +253,13 @@
     <MESSAGE value="Normalización completada" />
     <MESSAGE value="starting rna" />
     <option name="LAST_COMMIT_MESSAGE" value="starting rna" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Proyecto$normalization.coverage" NAME="normalization Coverage Results" MODIFIED="1685837184633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA" />
+    <SUITE FILE_PATH="coverage/Proyecto$test_train_mx__1_.coverage" NAME="test_train_mx (1) Coverage Results" MODIFIED="1685853288834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/normalized_data" />
+    <SUITE FILE_PATH="coverage/Proyecto$test_train_arg.coverage" NAME="test_train_arg Coverage Results" MODIFIED="1685853277471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/normalized_data" />
+    <SUITE FILE_PATH="coverage/Proyecto$rna.coverage" NAME="rna Coverage Results" MODIFIED="1685941248317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA" />
+    <SUITE FILE_PATH="coverage/Proyecto$test_train_cl.coverage" NAME="test_train_cl Coverage Results" MODIFIED="1685853282723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/normalized_data" />
+    <SUITE FILE_PATH="coverage/Proyecto$test_train_it.coverage" NAME="test_train_it Coverage Results" MODIFIED="1685853286034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/normalized_data" />
   </component>
 </project>

@@ -19,7 +19,6 @@ def open_file():
 def mostrarAdvertencia():
     messagebox.showwarning("Advertencia", "Selecciona un archivo")
 
-
 class VentanaPrincipal(tk.Tk):
     def __init__(self):
         super().__init__()
