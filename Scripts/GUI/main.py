@@ -5,7 +5,6 @@ import tkinter as tk
 import csv
 
 
-
 def open_file():
     file = askopenfile(mode='r', filetypes=[('csv File', '*.csv')])  # Abriendo el archivo desde un file explorer
     if file is None:  # Si el usuario no selecciona algún archivo
