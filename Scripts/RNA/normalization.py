@@ -12,7 +12,7 @@ max_cargaAx_mx=mexico["MaxPd"].values
 
 with open ('normalized_data/pesos_cargaAx_mx.csv', 'w', newline='') as file_mexico:
     writer_mexico = csv.writer(file_mexico)
-    writer_mexico.writerow(["W", "MaxPd"])
+    writer_mexico.writerow(["Etiq1", "Etiq2"])
 
     for i in range(len(peso_personas_mx)): #peso_personas_mx y max_cargaAx tienen la misma dimension
         valor_normalizado_peso_mx = (peso_personas_mx[i]-peso_personas_mx.min()) / (peso_personas_mx.max() - peso_personas_mx.min())
@@ -26,7 +26,7 @@ max_cargaAx_cl = chile["MaxPd"].values
 #Chile
 with open('normalized_data/pesos_cargaAx_cl.csv', 'w', newline='') as file_chile:
     writer_chile = csv.writer(file_chile)
-    writer_chile.writerow(["W", "MaxPd"])
+    writer_chile.writerow(["Etiq1", "Etiq2"])
 
     for i in range(len(peso_personas_cl)):  # peso_personas_mx y max_cargaAx tienen la misma dimension
         valor_normalizado_peso_cl = (peso_personas_cl[i] - peso_personas_cl.min()) / (
@@ -37,21 +37,21 @@ with open('normalized_data/pesos_cargaAx_cl.csv', 'w', newline='') as file_chile
 #valor_normalizado = (valor_original - valor_minimo) / (valor_maximo - valor_minimo)
 
 latitud= italia["Latitude"].values  # lee solo los valores sin indices
-longitud= italia["Longitude"].values
+#longitud= italia["Longitude"].values
 magnitud= italia["Magnitude"].values
 
 
 #italia
 with open('normalized_data/magnitud_it.csv', 'w', newline='') as file_italia:
     writer_italia = csv.writer(file_italia)
-    writer_italia.writerow(["Latitude", "Longitude", "Magnitude"])
+    writer_italia.writerow(["Etiq1", "Etiq2"])
 
     for i in range(len(latitud)):
          valor_normalizado_latitud = (latitud[i] - latitud.min()) / (latitud.max() - latitud.min())
-         valor_normalizado_longitud = (longitud[i] - longitud.min()) / (longitud.max() - longitud.min())
+         #valor_normalizado_longitud = (longitud[i] - longitud.min()) / (longitud.max() - longitud.min())
          valor_normalizado_magnitud = (magnitud[i] - magnitud.min()) / (magnitud.max() - magnitud.min())
 
-         writer_italia.writerow([valor_normalizado_latitud, valor_normalizado_longitud, valor_normalizado_magnitud])
+         writer_italia.writerow([valor_normalizado_latitud, valor_normalizado_magnitud])
 
 magnitudd_total=argentina["Magnitude"].values  # lee solo los valores sin indices
 magnitudd_error = argentina["errorMag"].values
@@ -59,7 +59,7 @@ magnitudd_error = argentina["errorMag"].values
 #argentina
 with open('normalized_data/magnitud_Arg.csv', 'w', newline='') as file_argentina:
     writer_argentina = csv.writer(file_argentina)
-    writer_argentina.writerow(["Magnitude", "errorMag"])
+    writer_argentina.writerow(["Etiq1", "Etiq2"])
 
     for i in range(len(magnitudd_total)):
         valor_normalizado_magnitud = (magnitudd_total[i] - magnitudd_total.min()) / (
