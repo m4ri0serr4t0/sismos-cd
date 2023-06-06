@@ -5,32 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cebbdde-ac40-4739-9f1d-8659e44589cb" name="Changes" comment="almost rna">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/RNA/arquitectura_modelo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/RNA/datasets/argentina2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/RNA/datasets/histogram.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/RNA/datasets/histogram3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/RNA/datasets/histograms2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/RNA/datasets/modify.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/RNA/modelo_entrenado.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/RNA/open_keras.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/RNA/test_data_it.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/RNA/train_data_it.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/normalization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/magnitud_Arg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/normalized_data/magnitud_Arg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/magnitud_it.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/normalized_data/magnitud_it.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/pesos_cargaAx_cl.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/normalized_data/pesos_cargaAx_cl.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/normalized_data/pesos_cargaAx_mx.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/normalized_data/pesos_cargaAx_mx.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/rna2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/rna2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/test_data_mx.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/test_data_mx.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/test_train/test_data/test_data_arg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/test_data_arg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/test_train/test_data/test_data_cl.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/test_data_cl.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/test_train/test_data/test_data_it.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/test_train/train_data/train_data_arg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/train_data_arg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/test_train/train_data/train_data_cl.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/train_data_cl.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/test_train/train_data/train_data_it.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/train_data_mx.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/train_data_mx.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +191,7 @@
       <workItem from="1685940136467" duration="691000" />
       <workItem from="1685940936034" duration="331000" />
       <workItem from="1685997346192" duration="9086000" />
-      <workItem from="1686008025046" duration="2621000" />
+      <workItem from="1686008025046" duration="4153000" />
     </task>
     <task id="LOCAL-00001" summary="Agregados conjuntos de datos y implementación de normalización">
       <created>1685679530348</created>
@@ -267,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686001181315</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="almost rna">
+      <created>1686010756392</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686010756392</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
