@@ -44,9 +44,9 @@ y_test_cl = test_data_cl[['Etiq1', 'Etiq2']].values
 X_train_combined = np.concatenate((X_train, X_train_arg, X_train_cl, X_train_it), axis=0)
 y_train_combined = np.concatenate((y_train, y_train_arg, y_train_cl, y_train_it), axis=0)
 
+
 X_test_combined = np.concatenate((X_test, X_test_arg, X_test_cl), axis=0)
 y_test_combined = np.concatenate((y_test, y_test_arg, y_test_cl), axis=0)
-
 # Crear un modelo de red neuronal para todos los conjuntos de datos
 model = Sequential()
 model.add(Dense(64, input_dim=X_train_combined.shape[1], activation='relu'))
