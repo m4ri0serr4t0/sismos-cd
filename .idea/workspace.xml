@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cebbdde-ac40-4739-9f1d-8659e44589cb" name="Changes" comment="almost rna">
-      <change afterPath="$PROJECT_DIR$/Scripts/GUI/MainWindow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/GUI/ResultsWindow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/GUI/myj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/GUI/ColumnSelectionWindow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/GUI/DataProcessor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/GUI/Plots.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/GUI/Window.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/modelo_entrenado.keras" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/modelo_entrenado.keras" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/RNA/rna2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/RNA/rna2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/GUI/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/GUI/MainWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/GUI/ResultsWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/GUI/ResultsWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/GUI/myj.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/GUI/myj.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +64,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.MainWindow">
+    <configuration name="ColumnSelectionWindow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/GUI" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\GUI\ColumnSelectionWindow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="MainWindow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Proyecto" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -85,7 +108,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="histogram3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Plots" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Proyecto" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -93,34 +116,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/RNA/datasets" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/GUI" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/RNA/datasets/histogram3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="modify" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Proyecto" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/RNA/datasets" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/RNA/datasets/modify.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/GUI/Plots.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,10 +177,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.MainWindow" />
+        <item itemvalue="Python.ColumnSelectionWindow" />
+        <item itemvalue="Python.Plots" />
         <item itemvalue="Python.open_keras" />
         <item itemvalue="Python.rna2" />
-        <item itemvalue="Python.histogram3" />
-        <item itemvalue="Python.modify" />
       </list>
     </recent_temporary>
   </component>
@@ -207,6 +208,9 @@
       <workItem from="1686805127725" duration="2151000" />
       <workItem from="1686808584803" duration="1202000" />
       <workItem from="1686859118224" duration="599000" />
+      <workItem from="1686889380957" duration="1565000" />
+      <workItem from="1686932733209" duration="1747000" />
+      <workItem from="1686964744146" duration="6242000" />
     </task>
     <task id="LOCAL-00001" summary="Agregados conjuntos de datos y implementación de normalización">
       <created>1685679530348</created>
@@ -297,16 +301,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="almost rna" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Proyecto$AskColumnsWindow.coverage" NAME="AskColumnsWindow Coverage Results" MODIFIED="1686970607199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/GUI" />
     <SUITE FILE_PATH="coverage/Proyecto$test_train_mx.coverage" NAME="test_train_mx Coverage Results" MODIFIED="1686004654971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/test_train" />
     <SUITE FILE_PATH="coverage/Proyecto$rna.coverage" NAME="rna Coverage Results" MODIFIED="1685997830169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA" />
     <SUITE FILE_PATH="coverage/Proyecto$test_train_arg.coverage" NAME="test_train_arg Coverage Results" MODIFIED="1686004630023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/test_train" />
     <SUITE FILE_PATH="coverage/Proyecto$histogram3.coverage" NAME="histogram3 Coverage Results" MODIFIED="1686008568646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/datasets" />
     <SUITE FILE_PATH="coverage/Proyecto$histogram.coverage" NAME="histogram Coverage Results" MODIFIED="1686007645500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/datasets" />
     <SUITE FILE_PATH="coverage/Proyecto$rna2.coverage" NAME="rna2 Coverage Results" MODIFIED="1686026388468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA" />
+    <SUITE FILE_PATH="coverage/Proyecto$Plots.coverage" NAME="Plots Coverage Results" MODIFIED="1686969389267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/GUI" />
     <SUITE FILE_PATH="coverage/Proyecto$histograms2.coverage" NAME="histograms2 Coverage Results" MODIFIED="1686007222608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/datasets" />
     <SUITE FILE_PATH="coverage/Proyecto$test_train_mx__1_.coverage" NAME="test_train_mx (1) Coverage Results" MODIFIED="1685853288834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/normalized_data" />
     <SUITE FILE_PATH="coverage/Proyecto$normalization.coverage" NAME="normalization Coverage Results" MODIFIED="1686004606825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA" />
-    <SUITE FILE_PATH="coverage/Proyecto$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1686808009880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/GUI" />
+    <SUITE FILE_PATH="coverage/Proyecto$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1686971584615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/GUI" />
     <SUITE FILE_PATH="coverage/Proyecto$open_keras.coverage" NAME="open_keras Coverage Results" MODIFIED="1686026445111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA" />
     <SUITE FILE_PATH="coverage/Proyecto$test_train_cl.coverage" NAME="test_train_cl Coverage Results" MODIFIED="1686004662302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/test_train" />
     <SUITE FILE_PATH="coverage/Proyecto$modify.coverage" NAME="modify Coverage Results" MODIFIED="1686008532319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/RNA/datasets" />
