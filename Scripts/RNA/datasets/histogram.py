@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 data = pd.read_csv('italia.csv')
-#data2 = pd.read_csv('italia.csv')
+#data2 = pd.read_csv('Italia.csv')
 
 
 columna = data['Magnitude']

@@ -1,8 +1,9 @@
 import tkinter as tk
-from tkinter.filedialog import askopenfile
+from tkinter.filedialog import askopenfile, asksaveasfile
 from tkinter import messagebox
-
 import matplotlib
+from Scripts.GUI.DataProcessor import DataPreprocessor
+from Scripts.GUI.Normalizator import Normalizator
 
 matplotlib.use('TkAgg')
 import pandas as pd
@@ -10,11 +11,9 @@ from tkinter import ttk
 from PIL import ImageTk, Image
 import webbrowser
 from matplotlib import pyplot as plt
-
 from ResultsWindow import resultWindow
-from Plots import plot
 from Scripts.GUI.ColumnSelectionWindow import ColumnSelectionWindow
-
+import numpy as np
 
 def showEmptyFileWarning():
     messagebox.showwarning("Advertencia", "Selecciona un archivo")
@@ -33,12 +32,12 @@ class mainWindow(tk.Tk):
         self.menu_bar = tk.Menu(self)
         self.file_menu = tk.Menu(self.menu_bar, tearoff=0)
         self.file_menu.add_command(label="Abrir Archivo", command=self.open_file)
-        self.file_menu.add_command(label="Guardar Archivo", command=self.open_file)
+        self.file_menu.add_command(label="Guardar Archivo", command=self.save_file)
         self.file_menu.add_separator()
         self.file_menu.add_command(label="Salir", command=self.quit)
 
         self.visualization_menu = tk.Menu(self.menu_bar, tearoff=0)
-        self.visualization_menu.add_command(label="Plot", command=self.displayPlot)
+        self.visualization_menu.add_command(label="Disperssion Plot", command=self.displayPlot)
 
         self.help_menu = tk.Menu(self.menu_bar, tearoff=0)
         self.help_menu.add_command(label="Contacto", command=openLink)
@@ -50,10 +49,13 @@ class mainWindow(tk.Tk):
         self.config(menu=self.menu_bar)
 
         self.imageFrame = ttk.Frame(self, width=300, height=300)
-        self.imageFrame.grid(row=5, column=1, columnspan=3, padx=10, pady=20)
+        self.imageFrame.grid(row=5, column=2, columnspan=3, padx=10, pady=20)
 
-        self.labelBienvenida = ttk.Label(self, text="Bienvenido :)")
-        self.labelBienvenida.grid(row=7, column=2, columnspan=3, padx=10, pady=5)
+        self.labelBienvenida = ttk.Label(self, text="Welcome to MyJ Data Processor")
+        self.labelSelect = ttk.Label(self, text="Select a File to Begin")
+
+        self.labelBienvenida.grid(row=7, column=3, columnspan=5, padx=10, pady=5)
+        self.labelSelect.grid(row=8, column=3, columnspan=5, padx=10, pady=5)
 
         self.imageMyJ = ImageTk.PhotoImage(Image.open("myj.jpg"))
         self.imageLabel = ttk.Label(self.imageFrame, image=self.imageMyJ)
@@ -63,17 +65,22 @@ class mainWindow(tk.Tk):
         self.buttons_frame.grid(row=0, column=4, rowspan=2, padx=10, pady=20, sticky='nsew')
         self.buttons_frame.grid_remove()  # Ocultar el Frame inicialmente
 
-        self.button1 = ttk.Button(self.buttons_frame, text="Preprocesado", command=resultWindow)
+        self.button1 = ttk.Button(self.buttons_frame, text="Preprocesado", command=self.preprocess)
         self.button1.pack(pady=5)
 
         self.button2 = ttk.Button(self.buttons_frame, text="Validacion Cruzada", command=resultWindow)
         self.button2.pack(pady=5)
 
-        self.button3 = ttk.Button(self.buttons_frame, text="Algoritmo 1")
+        self.button3 = ttk.Button(self.buttons_frame, text="Normalizar Datos")
         self.button3.pack(pady=5)
 
-        self.button4 = ttk.Button(self.buttons_frame, text="Algoritmo 2")
+        self.button4 = ttk.Button(self.buttons_frame, text="Algoritmo")
         self.button4.pack(pady=5)
+
+        self.buttonReset = ttk.Button(self.buttons_frame, text="Eliminar cambios", command=self.reset_file)
+        self.buttonReset.pack(pady=10)
+
+        self.original_df = None
 
         self.headers = []  # Headers del archivo csv
         self.trv = None  # Treeview widget para mostrar los datos
@@ -88,14 +95,49 @@ class mainWindow(tk.Tk):
             showEmptyFileWarning()  # Muestra advertencia
         else:
             self.selected_file = archivo.name
-            self.displayContent(archivo)
+            df = pd.read_csv(archivo)
+            self.original_df = df.copy()  # Actualiza el DataFrame original
+            self.displayContent(df)
 
-    def displayContent(self, file):
-        global df
-        df = pd.read_csv(file)
+
+    def save_file(self):
+        if self.trv:
+            file = asksaveasfile(mode='w', defaultextension=".csv", filetypes=[('CSV File', '*.csv')])
+            if file is None:
+                return  # El usuario canceló la operación de guardado
+            else:
+                # Obtener los datos del treeview
+                data = []
+                for child in self.trv.get_children():
+                    values = self.trv.item(child, 'values')
+                    data.append(values)
+
+                # Obtener los nombres de las columnas del treeview
+                headers = self.headers
+
+                # Crear un DataFrame de Pandas con los datos y las columnas
+                df = pd.DataFrame(data, columns=headers)
+
+                # Guardar el DataFrame en un archivo CSV
+                df.to_csv(file.name, index=False)
+                file.close()  # Cierra el archivo
+
+                messagebox.showinfo("Éxito", "El archivo se ha guardado correctamente.")
+        else:
+            messagebox.showwarning("Advertencia", "No se ha seleccionado ningún archivo.")
+
+    def reset_file(self):
+        if self.original_df is not None:
+            self.displayContent(self.original_df)
+            messagebox.showinfo("Éxito", "Se ha restaurado el archivo original.")
+        else:
+            messagebox.showwarning("Advertencia", "No se ha cargado ningún archivo original.")
+
+    def displayContent(self, df):
+
         self.headers = list(df.columns)
         self.hideWelcomeWidgets()
-        self.create_treeview()
+        self.create_treeview(df)
         self.buttons_frame.grid()
 
     def displayPlot(self):
@@ -103,6 +145,7 @@ class mainWindow(tk.Tk):
             df = pd.read_csv(self.selected_file)
             columns = df.columns
             if len(columns) >= 2:
+                # Aquí puedes agregar el código para seleccionar las columnas y generar el scatter plot
                 column_window = ColumnSelectionWindow(columns, self.plot_selected_columns)
                 column_window.mainloop()
             else:
@@ -111,20 +154,36 @@ class mainWindow(tk.Tk):
         else:
             messagebox.showwarning("Advertencia", "No se ha seleccionado ningún archivo.")
 
-
     def plot_selected_columns(self, columns):
         df = pd.read_csv(self.selected_file)
         if len(columns) >= 2:  # Verifica si hay al menos dos columnas seleccionadas
-            plt.hist(df[columns], bins=10, alpha=0.5, label=columns)
-            plt.xlabel('Valor')
-            plt.ylabel('Frecuencia')
-            plt.title('Histograma')
-            plt.legend()
-            plt.show()
+            # Verifica si las columnas seleccionadas son numéricas
+            numeric_columns = [col for col in columns if np.issubdtype(df[col].dtype, np.number)]
+            if len(numeric_columns) == len(columns):
+                plt.scatter(df[columns[0]], df[columns[1]])
+                plt.xlabel(columns[0])
+                plt.ylabel(columns[1])
+                plt.title('Diagrama de Dispersión')
+                plt.show()
+            else:
+                messagebox.showwarning("Advertencia", "Las columnas seleccionadas deben ser numéricas.")
         else:
-            messagebox.showwarning("Advertencia", "Selecciona al menos dos columnas para crear un histograma.")
+            messagebox.showwarning("Advertencia",
+                                   "Selecciona al menos dos columnas para crear un diagrama de dispersión.")
 
-    def create_treeview(self):
+    def preprocess(self):
+        if self.selected_file:
+            df = pd.read_csv(self.selected_file)
+            data_preprocessor = DataPreprocessor(df)
+            cleaned_data = data_preprocessor.preprocess()
+            self.displayContent(cleaned_data)
+            messagebox.showinfo("Éxito", "La limpieza y normalizacion de datos se ha realizado correctamente.")
+        else:
+            messagebox.showwarning("Advertencia", "No se ha seleccionado ningún archivo.")
+
+
+
+    def create_treeview(self, df):
         if self.trv:
             self.trv.destroy()
 
@@ -166,6 +225,7 @@ class mainWindow(tk.Tk):
     def hideWelcomeWidgets(self):
         self.imageFrame.grid_forget()
         self.labelBienvenida.grid_forget()
+        self.labelSelect.grid_forget()
 
 
 if __name__ == '__main__':
