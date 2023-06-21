@@ -10,6 +10,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Scripts\GUI\processed_Global.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scripts\GUI\processed_Mexico.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Scripts\GUI\testing.csv">
           <value>
             <Attribute>
@@ -32,6 +46,13 @@
           </value>
         </entry>
         <entry key="\Scripts\RNA2\Datasets\Global.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scripts\RNA2\Datasets\Grecia.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

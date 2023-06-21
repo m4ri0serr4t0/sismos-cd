@@ -22,7 +22,7 @@ def count_duplicate_rows(file_path):
 
 
 # Ruta del archivo CSV
-file_path = 'D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA2\Datasets\Italia.csv'
+file_path = 'D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA2\Datasets\Grecia.csv'
 
 # Llamar a la función para contar filas duplicadas
 duplicate_count = count_duplicate_rows(file_path)

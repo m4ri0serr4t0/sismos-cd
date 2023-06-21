@@ -20,5 +20,5 @@ def contar_datos_faltantes(archivo_csv):
 
 
 # Ejemplo de uso
-archivo_csv = 'D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA2\DataSets\Italia.csv'
+archivo_csv = 'D:\Mario\Documents\Ingeniería en Computación\Octavo Semestre\Ciencia de  Datos\Proyecto\Scripts\RNA2\DataSets\Grecia.csv'
 contar_datos_faltantes(archivo_csv)

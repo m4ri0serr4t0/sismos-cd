@@ -1,6 +1,7 @@
 from tkinter import messagebox
 
 import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
 
 
 class DataPreprocessor:
@@ -26,6 +27,7 @@ class DataPreprocessor:
         self.df = self.df.drop_duplicates()
 
         # Normalize the data
+
         self.df = (self.df - self.df.mean()) / self.df.std()
 
         # Save the cleaned data in a new DataFrame
